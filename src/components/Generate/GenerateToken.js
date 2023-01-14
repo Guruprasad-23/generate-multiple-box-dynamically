@@ -22,6 +22,17 @@ const GenerateToken = () => {
     );
   };
 
+  const handleClear = () => {
+    setBlueBox([]);
+    setBlueTokenNo(0);
+    setBluePrefix('')
+    setBluePerRow(0)
+    setRedBox([]);
+    setRedTokenNo(0);
+    setRedPrefix('')
+    setRedPerRow(0)
+  };
+
   return (
     <>
       <div className="main">
@@ -97,7 +108,7 @@ const GenerateToken = () => {
             <Button size="small" variant="contained" onClick={handleSubmit}>
               Generate
             </Button>
-            <Button size="small" variant="contained">
+            <Button size="small" variant="contained" onClick={handleClear}>
               Clear
             </Button>
           </Box>
